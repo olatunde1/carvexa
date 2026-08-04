@@ -380,7 +380,7 @@
     box-shadow:0 12px 30px -18px rgba(0,0,0,.65);
   }
   .social-rail{
-    position:fixed;left:18px;bottom:24px;z-index:200;
+    position:fixed;right:24px;bottom:92px;z-index:200;
     display:flex;flex-direction:column;gap:10px;
   }
   .social-chip{
@@ -392,10 +392,11 @@
   }
   .social-chip:hover{transform:translateY(-3px) scale(1.05);filter:brightness(1.08);box-shadow:0 18px 34px -10px rgba(0,0,0,.55);}
   .social-chip svg{width:22px;height:22px;fill:currentColor;}
+  .social-chip img{width:22px;height:22px;object-fit:contain;}
   .social-chip.fb{background:#1877F2;}
   .social-chip.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);}
   .social-chip.tk{background:#000000;}
-  .social-chip.li{background:#0A66C2;}
+  .social-chip.li{background:#ffffff;}
 
   .float-whatsapp{
     position:fixed;right:24px;bottom:24px;z-index:200;
@@ -820,17 +821,17 @@
 </footer>
 
 <div class="social-rail" aria-label="Social media links">
-  <a href="https://facebook.com" class="social-chip fb" target="_blank" rel="noopener" aria-label="Facebook">
+  <a href="https://facebook.com/carvexamobility " class="social-chip fb" target="_blank" rel="noopener" aria-label="Facebook">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 8.5h2V5.5h-2.1c-2.8 0-4.4 1.5-4.4 4.3V11H7v3h2v6h3v-6h2.6l.4-3H12V10c0-.9.5-1.5 1.5-1.5z"/></svg>
   </a>
-  <a href="https://instagram.com" class="social-chip ig" target="_blank" rel="noopener" aria-label="Instagram">
+  <a href="https://instagram.com/carvexamobility" class="social-chip ig" target="_blank" rel="noopener" aria-label="Instagram">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.2A4.8 4.8 0 1016.8 12 4.8 4.8 0 0012 7.2zm0 2A2.8 2.8 0 1112 14.8 2.8 2.8 0 0112 9.2zm5.2-3.7a1.1 1.1 0 111.1 1.1 1.1 1.1 0 01-1.1-1.1z"/></svg>
   </a>
-  <a href="https://tiktok.com" class="social-chip tk" target="_blank" rel="noopener" aria-label="TikTok">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 3h2.6c.2 1.4.9 2.7 2 3.6v2.8c-1.4-.1-2.8-.6-4-1.4V14a4.8 4.8 0 01-9.6 0 4.8 4.8 0 019.6 0v1.5A3.2 3.2 0 1015.2 14V3z"/></svg>
+  <a href="https://www.tiktok.com/@carvexamobility" class="social-chip tk" target="_blank" rel="noopener" aria-label="TikTok">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 3c.2 1.8 1.1 3.2 2.6 4.1v2.5c-1.4-.1-2.8-.6-4-1.3v6.5a4.8 4.8 0 1 1-4.8-4.8c.6 0 1.2.1 1.8.3v2.5a2.4 2.4 0 1 0 1.8 2.3V3h.6z"/></svg>
   </a>
   <a href="https://linkedin.com" class="social-chip li" target="_blank" rel="noopener" aria-label="LinkedIn">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5A1.8 1.8 0 116.5 4.9a1.8 1.8 0 010 3.6zM4.8 10.2h3.5V20H4.8zm5.7 0h3.4v1.3h.1c.5-.9 1.6-1.9 3.3-1.9 3.6 0 4.3 2.3 4.3 5.4V20h-3.5v-18.8h3.5v2.5c.8-1.6 2.4-3.5 5.2-3.5 5.6 0 6.6 3.6 6.6 8.3V20h-3.5v-18.4c0-1.6-.1-3.6-2.2-3.6-2.2 0-2.6 1.7-2.6 3.4V20H10.5z"/></svg>
+    <img src="data:image/png;base64,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" alt="LinkedIn" />
   </a>
 </div>
 
