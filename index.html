@@ -380,7 +380,7 @@
     box-shadow:0 12px 30px -18px rgba(0,0,0,.65);
   }
   .social-rail{
-    position:fixed;right:24px;bottom:92px;z-index:200;
+    position:fixed;right:24px;bottom:80px;z-index:200;
     display:flex;flex-direction:column;gap:10px;
   }
   .social-chip{
@@ -393,24 +393,14 @@
   .social-chip:hover{transform:translateY(-3px) scale(1.05);filter:brightness(1.08);box-shadow:0 18px 34px -10px rgba(0,0,0,.55);}
   .social-chip svg{width:22px;height:22px;fill:currentColor;}
   .social-chip img{width:22px;height:22px;object-fit:contain;}
+  .social-chip.wa{background:#25D366;}
   .social-chip.fb{background:#1877F2;}
   .social-chip.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);}
   .social-chip.tk{background:#000000;}
   .social-chip.li{background:#ffffff;}
 
-  .float-whatsapp{
-    position:fixed;right:24px;bottom:24px;z-index:200;
-    width:58px;height:58px;border-radius:50%;
-    background:#25D366;color:#fff;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 14px 30px -10px rgba(0,0,0,.5);
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .float-whatsapp:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 18px 34px -10px rgba(0,0,0,.55);}
-  .float-whatsapp svg{width:29px;height:29px;}
-
   .scroll-top-btn{
-    position:fixed;right:24px;bottom:92px;z-index:200;
+    position:fixed;right:24px;bottom:24px;z-index:200;
     width:46px;height:46px;border-radius:50%;
     background:var(--navy);color:var(--gold-light);border:1px solid rgba(255,255,255,.16);
     display:flex;align-items:center;justify-content:center;cursor:pointer;
@@ -422,9 +412,9 @@
   .scroll-top-btn:hover{background:var(--navy-2);}
 
   @media(max-width:560px){
-    .float-whatsapp{width:50px;height:50px;right:16px;bottom:16px;}
-    .float-whatsapp svg{width:25px;height:25px;}
-    .scroll-top-btn{width:40px;height:40px;right:16px;bottom:74px;}
+    .social-rail{right:16px;bottom:66px;}
+    .social-chip,.scroll-top-btn{width:40px;height:40px;}
+    .scroll-top-btn{right:16px;bottom:16px;}
   }
 
   /* ===== RESPONSIVE ===== */
@@ -821,6 +811,9 @@
 </footer>
 
 <div class="social-rail" aria-label="Social media links">
+  <a href="https://wa.me/2348141870013" class="social-chip wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.14-.2.3-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.71-1.61-2-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.51.14-.17.19-.29.29-.48.1-.2.05-.37-.02-.51-.08-.15-.65-1.57-.9-2.15-.24-.57-.48-.5-.65-.5-.17-.01-.36-.01-.56-.01-.2 0-.51.07-.78.37-.26.3-1.02 1-1.02 2.43 0 1.44 1.05 2.82 1.19 3.02.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.11.56-.08 1.7-.7 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.34z"/><path d="M12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.95 9.95 0 0012.02 22C17.53 22 22 17.52 22 12S17.53 2 12.02 2zm0 18.1a8.1 8.1 0 01-4.13-1.13l-.3-.18-3.02.79.81-2.94-.19-.3A8.09 8.09 0 013.92 12c0-4.47 3.64-8.1 8.1-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.47-3.63 8.1-8.1 8.1z"/></svg>
+  </a>
   <a href="https://facebook.com/carvexamobility " class="social-chip fb" target="_blank" rel="noopener" aria-label="Facebook">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 8.5h2V5.5h-2.1c-2.8 0-4.4 1.5-4.4 4.3V11H7v3h2v6h3v-6h2.6l.4-3H12V10c0-.9.5-1.5 1.5-1.5z"/></svg>
   </a>
@@ -834,10 +827,6 @@
     <img src="data:image/png;base64,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" alt="LinkedIn" />
   </a>
 </div>
-
-<a href="https://wa.me/2348141870013" class="float-whatsapp" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.14-.2.3-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.71-1.61-2-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.51.14-.17.19-.29.29-.48.1-.2.05-.37-.02-.51-.08-.15-.65-1.57-.9-2.15-.24-.57-.48-.5-.65-.5-.17-.01-.36-.01-.56-.01-.2 0-.51.07-.78.37-.26.3-1.02 1-1.02 2.43 0 1.44 1.05 2.82 1.19 3.02.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.11.56-.08 1.7-.7 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.34z"/><path d="M12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.95 9.95 0 0012.02 22C17.53 22 22 17.52 22 12S17.53 2 12.02 2zm0 18.1a8.1 8.1 0 01-4.13-1.13l-.3-.18-3.02.79.81-2.94-.19-.3A8.09 8.09 0 013.92 12c0-4.47 3.64-8.1 8.1-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.47-3.63 8.1-8.1 8.1z"/></svg>
-</a>
 
 <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
